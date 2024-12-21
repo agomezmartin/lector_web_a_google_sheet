@@ -60,8 +60,8 @@ function configurarTriggerPorcentaje() {
     }
   });
 
-  // Configurar un nuevo trigger para días laborales (lunes a viernes)
-  const diasLaborales = [ScriptApp.WeekDay.MONDAY, ScriptApp.WeekDay.TUESDAY, ScriptApp.WeekDay.WEDNESDAY, ScriptApp.WeekDay.THURSDAY, ScriptApp.WeekDay.FRIDAY];
+  // Configurar un nuevo trigger para días laborales (martes a sábado). La web muestra el dato del día anterior.
+  const diasLaborales = [ScriptApp.WeekDay.TUESDAY, ScriptApp.WeekDay.WEDNESDAY, ScriptApp.WeekDay.THURSDAY, ScriptApp.WeekDay.FRIDAY, ScriptApp.WeekDay.SATURDAY];
 
   diasLaborales.forEach(dia => {
     ScriptApp.newTrigger("importarPorcentajeSP500")
